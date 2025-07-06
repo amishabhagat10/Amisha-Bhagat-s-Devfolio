@@ -1,0 +1,169 @@
+/* Reset + Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f0ff; /* light lavender */
+  color: #2c1a40;
+  padding: 2rem;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 🟣 Blobby Background */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  opacity: 0.25;
+  filter: blur(120px);
+  animation: floatBlob 20s ease-in-out infinite alternate;
+}
+
+body::before {
+  background: #ff69b4;
+  top: -100px;
+  left: -100px;
+}
+
+body::after {
+  background: #5c2d91;
+  bottom: -100px;
+  right: -100px;
+}
+
+@keyframes floatBlob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, -30px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* Container Box */
+.box {
+  background: #ffffff;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: auto;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(92, 45, 145, 0.1);
+  text-align: center;
+}
+
+.box h2 {
+  font-size: 2.5rem;
+  color: #5c2d91;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #ff69b4;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+select {
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  font-weight: 500;
+  transition: border-color 0.2s ease;
+}
+
+select:focus {
+  border-color: #a500d8;
+  outline: none;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+/* Product Cards */
+.product-card {
+  background: #fefefe;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 8px 16px rgba(170, 0, 255, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(255, 0, 200, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  color: #8000ff;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #4b0082;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  border-top: 1px solid #e5d3f3;
+  margin-top: 2rem;
+}
+
+/* Make sure the page fills the height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content grows to push footer down */
+.page-wrapper {
+  flex: 1;
+}
+
+
+
+

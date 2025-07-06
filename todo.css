@@ -1,0 +1,230 @@
+body {
+  background-color: #f5f0fa; /* Soft Lavender */
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.page-title {
+  color: #5c2d91; /* Deep Purple */
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.box {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 15px 35px rgba(92, 45, 145, 0.15);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.intro {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  width: 65%;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #ff69b4;
+  box-shadow: 0 0 0 2px rgba(255, 105, 180, 0.2);
+}
+
+button {
+  padding: 0.7rem 1.2rem;
+  background: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #e754a3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+li {
+  background: #fbe4f2;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.6rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+  font-size: 1rem;
+  color: #333;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #999;
+  background: #e4e4e4;
+}
+
+li .actions {
+  display: flex;
+  gap: 10px;
+}
+
+li .actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #666;
+  transition: 0.2s;
+}
+
+li .actions button:hover {
+  color: #d63384;
+}
+
+.task-count {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* ✨ Floating Background Blobs */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  opacity: 0.3;
+  filter: blur(100px);
+  animation: floatBlob 20s ease-in-out infinite;
+}
+
+body::before {
+  background: #ff69b4;
+  top: -100px;
+  left: -100px;
+}
+
+body::after {
+  background: #5c2d91;
+  bottom: -100px;
+  right: -100px;
+}
+
+@keyframes floatBlob {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 🎉 Animate Title */
+.page-title {
+  animation: slideIn 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✨ Animate List Items on Add */
+li {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 💫 Glow Button on Hover */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ff69b480;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #4b0082;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  border-top: 1px solid #e5d3f3;
+}
+
+/* Make sure the page fills the height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content grows to push footer down */
+.container {
+  flex: 1;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products | Amisha's Devfolio</title>
+  <link rel="stylesheet" href="products.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="box">
+      <h2>Product Listings</h2>
+      
+      <div class="filters">
+        <select id="filter" onchange="filterProducts()">
+          <option value="all">All</option>
+          <option value="electronics">Electronics</option>
+          <option value="clothing">Clothing</option>
+        </select>
+
+        <select id="sort" onchange="sortProducts()">
+          <option value="default">Sort By</option>
+          <option value="price">Price</option>
+          <option value="rating">Rating</option>
+        </select>
+      </div>
+
+      <div id="productContainer" class="product-grid">
+        <!-- Products will be injected here -->
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>Designed & Built by Amisha Bhagat | 2025</p>
+  </footer>
+  <script src="products.js"></script>
+</body>
+</html>
