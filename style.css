@@ -11,12 +11,12 @@ body {
   min-height: 100vh;
   background: linear-gradient(135deg, #f9f4ff, #e7e0ff);
   position: relative;
-  padding: 0; /* Remove this if you need space inside .landing-container */
+  padding: 0; 
   overflow-x: hidden;
 }
 
 
-/* 🎨 Floating Blobs */
+
 body::before,
 body::after {
   content: "";
@@ -47,7 +47,7 @@ body::after {
   100% { transform: translate(30px, -20px); }
 }
 
-/* 🧊 Container */
+
 .landing-container {
   max-width: 960px;
   width: 100%;
@@ -55,7 +55,7 @@ body::after {
   text-align: center;
 }
 
-/* 🌈 Heading */
+
 .landing-container h1 {
   font-size: 3rem;
   color: #4a007a;
@@ -65,7 +65,7 @@ body::after {
   padding-bottom: 0.5rem;
 }
 
-/* 📦 Card Grid */
+
 .card-grid {
   display: flex;
   justify-content: center;
@@ -74,7 +74,7 @@ body::after {
   margin-top: 2rem;
 }
 
-/* 💫 Card Style */
+
 .card {
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
@@ -94,7 +94,7 @@ body::after {
   background: rgba(255, 255, 255, 0.8);
 }
 
-/* ✏️ Card Text */
+
 .card h2 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
@@ -128,7 +128,6 @@ html {
 }
 
 
-/* ✅ THE FLUSH-TO-BOTTOM FOOTER FIX */
 footer {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.95);

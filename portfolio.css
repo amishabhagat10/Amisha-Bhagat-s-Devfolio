@@ -12,7 +12,7 @@ body {
   padding: 0;
 }
 
-/* ✨ Floating Background Blobs for Portfolio */
+
 body::before,
 body::after {
   content: "";
@@ -27,13 +27,13 @@ body::after {
 }
 
 body::before {
-  background: #ff69b4; /* Soft Pink */
+  background: #ff69b4; 
   top: -100px;
   left: -100px;
 }
 
 body::after {
-  background: #5c2d91; /* Deep Purple */
+  background: #5c2d91; 
   bottom: -100px;
   right: -100px;
 }
@@ -56,7 +56,7 @@ body::after {
   padding: 40px 20px;
 }
 
-/* Footer glued to bottom */
+
 footer {
   text-align: center;
   padding: 20px 0;
@@ -68,7 +68,7 @@ footer {
   border-top: 1px solid #e5d3f3;
 }
 
-/* Animated heading underline */
+
 h2 {
   border-bottom: 2px solid #ff00c8;
   padding-bottom: 5px;
@@ -88,7 +88,7 @@ h2 {
   }
 }
 
-/* Section Box */
+
 .box {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
@@ -194,7 +194,7 @@ h2 {
   color: #d100ff;
 }
 
-/* Smooth animations */
+
 a, .project-card, .box {
   transition: all 0.3s ease-in-out;
 }

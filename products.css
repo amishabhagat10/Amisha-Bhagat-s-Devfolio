@@ -1,4 +1,4 @@
-/* Reset + Base Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f0ff; /* light lavender */
+  background-color: #f4f0ff; 
   color: #2c1a40;
   padding: 2rem;
   position: relative;
@@ -15,7 +15,6 @@ body {
   overflow-x: hidden;
 }
 
-/* 🟣 Blobby Background */
 body::before,
 body::after {
   content: "";
@@ -53,7 +52,7 @@ body::after {
   }
 }
 
-/* Container Box */
+
 .box {
   background: #ffffff;
   padding: 2rem;
@@ -74,7 +73,7 @@ body::after {
   padding-bottom: 0.5rem;
 }
 
-/* Filters */
+
 .filters {
   display: flex;
   justify-content: flex-end;
@@ -97,7 +96,7 @@ select:focus {
   outline: none;
 }
 
-/* Product Grid */
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -105,7 +104,6 @@ select:focus {
   margin-top: 1rem;
 }
 
-/* Product Cards */
 .product-card {
   background: #fefefe;
   border-radius: 1rem;
@@ -151,7 +149,7 @@ footer {
   margin-top: 2rem;
 }
 
-/* Make sure the page fills the height */
+
 html, body {
   height: 100%;
   margin: 0;
@@ -160,7 +158,7 @@ html, body {
   flex-direction: column;
 }
 
-/* Main content grows to push footer down */
+
 .page-wrapper {
   flex: 1;
 }

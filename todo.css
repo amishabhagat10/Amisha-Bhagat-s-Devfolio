@@ -1,5 +1,5 @@
 body {
-  background-color: #f5f0fa; /* Soft Lavender */
+  background-color: #f5f0fa; 
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@ body {
 }
 
 .page-title {
-  color: #5c2d91; /* Deep Purple */
+  color: #5c2d91; 
   font-size: 3.5rem;
   margin-bottom: 2rem;
   font-weight: 700;
@@ -123,7 +123,7 @@ li .actions button:hover {
   color: #777;
 }
 
-/* ✨ Floating Background Blobs */
+
 body::before,
 body::after {
   content: "";
@@ -161,7 +161,7 @@ body::after {
   }
 }
 
-/* 🎉 Animate Title */
+
 .page-title {
   animation: slideIn 1s ease forwards;
   opacity: 0;
@@ -178,7 +178,7 @@ body::after {
   }
 }
 
-/* ✨ Animate List Items on Add */
+
 li {
   animation: fadeIn 0.5s ease;
 }
@@ -194,7 +194,7 @@ li {
   }
 }
 
-/* 💫 Glow Button on Hover */
+
 button {
   transition: all 0.3s ease;
 }
@@ -215,7 +215,7 @@ footer {
   border-top: 1px solid #e5d3f3;
 }
 
-/* Make sure the page fills the height */
+
 html, body {
   height: 100%;
   margin: 0;
@@ -224,7 +224,7 @@ html, body {
   flex-direction: column;
 }
 
-/* Main content grows to push footer down */
+
 .container {
   flex: 1;
 }
